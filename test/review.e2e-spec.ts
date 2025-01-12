@@ -39,6 +39,15 @@ describe('ReviewController (e2e)', () => {
     expect(response.body._id).toBeDefined();
   });
 
+  it('/review/create (POST) - fail', async () => {
+    const response = await request(app.getHttpServer())
+      .post('/review/create')
+      .send({ ...testDto, rating: 0 });
+
+    expect(response.statusCode).toEqual(400);
+    console.log(response.body);
+  });
+
   it('/review/byProduct/:productId (GET) - success', async () => {
     const response = await request(app.getHttpServer()).get(
       '/review/byProduct/' + productId,
