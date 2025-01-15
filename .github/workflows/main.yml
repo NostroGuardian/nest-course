@@ -15,5 +15,5 @@ jobs:
           registry: docker.pkg.github.com
           name: docker.pkg.github.com/NostroGuardian/nest-course/nest-course
           username: ${{ secrets.DOCKER_USERNAME }}
-          token: ${{ secrets.DOCKER_TOKEN }}
+          password: ${{ secrets.DOCKER_TOKEN }}
           tags: 'develop'
