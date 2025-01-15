@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nest-course-api:
+    image: nest-course-api:latest
+    container_name: nest-course-api-container
+    restart: always
+    ports:
+      - 3000:3000
+    volumes:
+      - ./.env:/opt/app/.env
