@@ -1,7 +1,8 @@
 version: '3'
 services:
   nest-course-api:
-    image: nest-course-api:latest
+    # image: nest-course-api:latest
+    image: docker.pkg.github.com/nostroguardian/nest-course/nest-course:develop
     container_name: nest-course-api-container
     restart: always
     ports:
