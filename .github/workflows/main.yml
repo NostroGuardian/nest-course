@@ -12,8 +12,8 @@ jobs:
       - name: Publish to registry
         uses: elgohr/Publish-Docker-Github-Action@v5
         with:
-          registry: docker.pkg.github.com
-          name: docker.pkg.github.com/NostroGuardian/nest-course/nest-course
+          registry: ghcr.io
+          name: ghcr.io/NostroGuardian/nest-course/nest-course
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
           tags: 'develop'
